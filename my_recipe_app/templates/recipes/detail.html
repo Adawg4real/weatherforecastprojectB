@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>******Adrianna's Awesome Recipes!!!*****</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="{% url 'list_recipes' %}">Main Page</a>
+        <a href="{% url 'create_recipe' %}">Add Recipe</a>
+        <a href="{% url 'search_recipe' %}">Search fo Recipe</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Recipes</h1>
+      <h2>Here is a list of all the recipes!!!</h2>
+      <div class="recipe-grid">
+        {% for recipe in recipes %}
+      <div>
+        <h3><a href="detail.html">{{ recipe.title }}</a></h3>
+        <p>{{ recipe.description }}</p>
+        <img src="{{ recipe.picture }}" alt="Recipe Image">
+        <div>4.3 stars</div>
+        <a href="{% url 'remove_recipe' %}}">Remove this Recipe</a>
+        <a href="{% url 'modify_recipe' %}}">Edit or modify this Recipe</a>
+        {% endfor %}
+      </div>
+    </main>
