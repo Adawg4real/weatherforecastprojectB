@@ -13,7 +13,7 @@
   <a href="#credits">Credits</a> •
 </p>
 
-![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)
+[![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.bsr.org%2Fen%2Findustries%2Ftechnology&psig=AOvVaw3j_VuepiimwFGb7orXPBt9&ust=1713020352725000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCIj_6qb4vIUDFQAAAAAdAAAAABAE)
 
 ## Key Features
 Welcome to Adrianna's awesome recipes!! This project is to create a recipe book that lets you add, remove, modify, and search through a cook book.
