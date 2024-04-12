@@ -4,7 +4,6 @@ import python_weather
 import asyncio
 import os
 
-
 async def getweather():
   async with python_weather.Client(unit=python_weather.IMPERIAL) as client:
     # fetch a weather forecast from a city

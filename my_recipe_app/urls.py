@@ -16,10 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-# from my_recipe_app.views import show_recipe, create_recipe, list_recipes
+from my_recipe_app.views import show_recipe, create_recipe, list_recipes, modify_recipe
 
 urlpatterns = [
     path('admin/',admin.site.urls),
     path('', include('my_receipe_app.urls')),
-    # path('recipes/<int:id>/', show_recipe, name='show_recipe'),
+    path('recipes/<int:id>/', show_recipe, name='show_recipe'),
+    path('recipes/create/', create_recipe, name='create_recipe'),
+    path('recipes/detail/', list_recipes, name='list_recipes'),
+    path('recipes/modify/', modify_recipe, name='modify_recipe')
 ]
