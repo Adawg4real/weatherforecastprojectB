@@ -1,6 +1,7 @@
 from django.shortcuts import redirect, render
 from my_recipe_app.models import Recipe
 from my_recipe_app.forms import RecipeForm
+import cgi
 
 def show_recipe(request, id):
   print('recipe id', id)
@@ -80,5 +81,12 @@ def modify_recipe(request, id):
   return render(request, 'my_recipe_app/modify.html')
   
 
-# # def list_recipes(request):
-# #   return ''
+def search_recipes(request, id):
+  # form = cgi.FieldStorage()
+  searchItem =  request.getvalue('searchbox')
+  if searchItem in Recipe.objects.all():
+    show_recipe(request,id)
+  else:
+    print("No recipes found")
+    return redirect('list_recipes')
+  # return ''

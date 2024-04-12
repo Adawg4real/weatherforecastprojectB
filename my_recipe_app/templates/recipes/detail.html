@@ -12,11 +12,13 @@
 
   <body>
     <header>
+      <div class ="topnav">
       <nav>
         <a href="{% url 'list_recipes' %}">Main Page</a>
         <a href="{% url 'create_recipe' %}">Add Recipe</a>
-        <a href="{% url 'search_recipe' %}">Search fo Recipe</a>
+        <input type="text" placeholder="Search for Recipe..">
       </nav>
+      </div>
     </header>
     <main>
       <h1>Recipes</h1>

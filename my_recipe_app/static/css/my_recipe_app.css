@@ -45,3 +45,13 @@ a{
 .ingredients-table tr:nth-child(even){
  background-color: rgba(0,0,0,0.1) 
 }
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
